@@ -9,6 +9,8 @@ function Home() {
   return (
     <div>
       <h2>Home Page</h2>
+      <h3>This is a basic introduction to HTML, the DOM and React</h3>
+      <h2>Computer Science Enrichment Club (CSEC) at UTSC</h2>
     </div>
   );
 }

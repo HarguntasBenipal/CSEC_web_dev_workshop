@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Weather from "./Weather";
 import "./App.css";
 
+
 // Home component
 function Home() {
   return (

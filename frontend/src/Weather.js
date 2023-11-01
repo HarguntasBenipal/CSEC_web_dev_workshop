@@ -9,7 +9,7 @@ function Weather() {
 
   useEffect(() => {
     // Replace 'YOUR_API_KEY' with your actual API key
-    const apiKey = "YOUR_API_KEY";
+    const apiKey = "YOUR_API_KEY"; //9fbfb4c21f13700376f6050045993ca4
     const city = "Toronto";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 

@@ -9,24 +9,27 @@ function Weather() {
 
   useEffect(() => {
     // Replace 'YOUR_API_KEY' with your actual API key
-    const apiKey = "YOUR_API_KEY"; //9fbfb4c21f13700376f6050045993ca4
-    const city = "Toronto";
+    const apiKey = '9fbfb4c21f13700376f6050045993ca4'; //9fbfb4c21f13700376f6050045993ca4
+    const city = userInput;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
     axios
       .get(url)
       .then((response) => {
-        // setWeatherData(response.data);
-        setWeatherData(mockData);
+        setWeatherData(response.data);
+        console.log(response.data)
+        //setWeatherData(mockData);
       })
       .catch((error) => {
+
         setWeatherData(mockData);
-        console.error(error);
+        //console.error(error);
       });
-  }, []);
+  }, [userInput]);
 
   const handleInputChange = (e) => {
     setUserInput(e.target.value);
+    console.log(userInput)
     setInputColor(`#${Math.floor(Math.random() * 16777215).toString(16)}`); // Change color on each input
   };
 
@@ -35,7 +38,7 @@ function Weather() {
       <h2>Weather Information</h2>
       {weatherData && (
         <div>
-          <p>Temperature: {weatherData.main.temp}°C</p>
+          <p>Temperature: {(weatherData.main.temp) - 273.15}°C</p>
           <p>Humidity: {weatherData.main.humidity}%</p>
           <p>Weather: {weatherData.weather[0].description}</p>
           <img

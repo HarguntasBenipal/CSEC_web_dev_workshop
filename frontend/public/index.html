@@ -15,6 +15,9 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Attaching CSS file -->
+    <link rel="stylesheet" href="/CSEC_web_dev_workshop-main/frontend/src/index.css">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,11 +27,12 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <!-- Javascript -->
+    <script></script>
+
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +43,55 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- General Introduction to HTML Tags -->
+    <div>
+      <h1><strong>Welcome to CSEC Web Deveopment Workshop</strong></h1>
+      <p class = 'p1'>
+        A student-run group at the University of Toronto Scarborough which focuses on helping students with a passion for 
+        Computer Science take the next step.
+        We do everything from hosting monthly job seminars to helping you create your own website.
+        Just show up to our events and you're a member! Be sure to follow us on any of our social media for announcements!
+      </p>
+
+      
+      <ul class = 'l1'>
+        We run:
+        <li>Seminars</li>
+        <li>Workshops</li>
+        <li>Competitons/ Hackathons</li>
+      </ul>
+    </div>
+
+    <img class = "img1" src="https://csec.club/static/f45c7f573d5b1751252dff5016ecd4da/2ed63/Landing.webp" alt="CSEC">
+    
+    <a href = "https://csec.club/" style="margin-left: 20px"> About our club</a>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!-- Javascript Functions and Applications -->
+    <!-- Simple Javascript Features to change the name dynamically -->
+
+    <!-- <div id = 'myText'>
+      Welcome to the workshop: 
+    </div>
+
+    <textarea id = 'changeName' placeholder="Whats your name?"></textarea>
+    <button onclick="changeName()">Click me!</button>
+
+    <script>
+      function changeName(){
+        document.getElementById('myText').innerHTML = document.getElementById('changeName').value;
+      }
+    </script> -->
+
+    <!-- Javascript code for a counter function -->
+
+    <div id = 'value'>1</div>
+    <button id="add">Add</button>
+    <button id = "subtract">Subtract</button>
+
+    <script src="/CSEC_web_dev_workshop-main/frontend/src/index.js"></script>
+
+
   </body>
 </html>
